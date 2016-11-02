@@ -1,7 +1,7 @@
 window.onload = function() {
   var expect = chai.expect;
   mocha.setup('bdd');
-  
+
   describe('test', function() {
 
     it("string set properly", function() {
@@ -9,7 +9,7 @@ window.onload = function() {
     })
 
   })
-  
+
 
   describe('sum', function() {
 
@@ -539,7 +539,7 @@ window.onload = function() {
         "Contract-signed": "blah blah - Joe"
       }
 
-      expect(addSignature("Joe", input)).to.deep.eq(expected)
+      expect(addSignature(input,"Joe")).to.deep.eq(expected)
 
       input = {
         "Agreement": "something",
@@ -550,7 +550,7 @@ window.onload = function() {
         "Code of Conduct-signed": "blah blah - Beth"
       }
 
-      expect(addSignature("Beth", input)).to.deep.eq(expected)
+      expect(addSignature(input,"Beth")).to.deep.eq(expected)
     })
 
   })
